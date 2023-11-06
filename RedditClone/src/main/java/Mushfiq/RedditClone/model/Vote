@@ -20,7 +20,7 @@ public class Vote {
     @Id
     @GeneratedValue(strategy = SEQUENCE)
     private Long voteId;
-    private VoteType voteType;
+    private VoteType voteType; // distinguish upvote / downvote
     @NotNull
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "postId", referencedColumnName = "postId")

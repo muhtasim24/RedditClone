@@ -17,7 +17,8 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @Entity
 @Table(name = "token")
 public class VerificationToken {
-
+// when a user is registered, a token is generated and store it in the database
+// send the token to the user as an activation link
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
